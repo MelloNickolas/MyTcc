@@ -26,7 +26,7 @@ public class AnimalResource {
         return animalService.saveAllAnimal(animalList);
     }
 
-    @GetMapping("/getAnimal")
+    @GetMapping()
     public List<Animal> getAllAnimal() {
         return animalService.fetchAllAnimal();
     }

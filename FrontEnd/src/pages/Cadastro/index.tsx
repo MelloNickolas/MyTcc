@@ -3,6 +3,44 @@ import cat from "../../assets/cadastro-login/Cat.png";
 import ImageInput from "./ImageInput/imageinput";
 import { Link } from "react-router-dom";
 import FullToolbar from "../../components/FullToolbar";
+import * as yup from "yup";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { cpf } from "cpf-cnpj-validator";
+
+const initialValues = {
+  email: "",
+  password: "",
+};
+
+const validationSchema = yup.object({
+  email: yup
+    .string()
+    .email("Entre com um email válido")
+    .required("Email válido"),
+
+  password: yup
+    .string()
+    .min(8, "Password minimum 8 characters")
+    .required("Password is required"),
+
+  confirmpassword: yup
+    .string()
+    .required("Password confirmation is required")
+    .oneOf([yup.ref("password")], "Confirmação incorreta"),
+
+  cpf: yup
+    .string()
+    .required("CPF is required")
+    .test((value) => cpf.isValid(value)),
+
+});
+
+
+
+const handleSubmit = (values: any) => {
+  console.log(values);
+};
+
 
 export default function Cadastro() {
   return (
@@ -57,14 +95,25 @@ export default function Cadastro() {
                     {" "}
                     Cpf{" "}
                   </label>
-                  <input
-                    id="cpf"
-                    type="text"
-                    name="cpf"
-                    placeholder="Digite seu cpf"
-                    required
-                    className={styles.inputBox__input}
-                  ></input>
+                  <Formik
+                    initialValues={initialValues}
+                    validationSchema={validationSchema}
+                    onSubmit={handleSubmit}
+                  >
+                  {(formikProps) => (
+                      <Form>
+                        <div>
+                          <Field
+                            name="cpf"
+                            placeholder="Digite seu CPF"
+                            required
+                            className={styles.inputBox__input}
+                          />
+                          <ErrorMessage component="div" name="cpf" />
+                        </div>
+                      </Form>
+                    )}
+                  </Formik>
                 </div>
 
                 <div className={styles.inputBox}>
