@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+
+.back{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+.bannerBox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    &__img{
+        width: 100%;
+    }
+    &__text{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        gap: 10px;
+
+    }
+}
+.h1{
+    color: white;
+    font-family: 'Yellowtail', cursive;
+    font-size: 100px;
+    opacity: 0.8;
+    font-weight: 900;
+}
+.h2{
+    color: white;
+    font-family: 'Zeyada', cursive;
+    font-size: 40px;
+    opacity: 0.8;
+}
+
+.adoteContainer{
+    background-color: rgb(248, 248, 248);
+    padding: 4.5rem 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+    position: relative;
+}
+.adoteBox{
+    background: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    text-align: center;
+
+    &__title{
+        font-size: 40px;
+        font-weight: 900;
+        font-family: 'Roboto', sans-serif;
+        color: #505050;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+    }
+    &__subtitle{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #505050;
+    }
+}
+.animais{
+    background-color: rgba(152, 188, 255, 0.3);
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 10%;
+    gap: 50px;
+}
+
+.animaisCard{
+    width:  300px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    cursor: pointer;
+}
+@keyframes anima{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+.animaisCard:hover{
+    animation-name: anima;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    opacity: 0.8;
+}
+.imgBox{
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+
+    &__img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+    }
+    &__cidadeBox{
+        display: flex;
+        align-self: flex-start;
+        position: absolute;
+        margin-left: 2%;
+        margin-top: 10px;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 5px 5px;
+        margin-right: 60%;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 5px;
+    }
+}
+.cidadeContent{
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    &__text{
+        font-size: max-content;
+        color: white;
+        font-family: 'Zeyada', cursive;
+    }
+
+}
+.cardText{
+    background-color: rgb(243, 243, 243);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.cardTextStart{
+    width: 45%;
+    height: 100%;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__title{
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        color: #505050;
+        font-weight: 900;
+    }
+    &__line{
+        height: 6px;
+        background-image: linear-gradient(to right, #2b7bf6, transparent);
+        width: 70%;
+        border-radius: 20px;
+    }
+}
+
+
+.cardTextEnd{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+.categorias{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.categoriasText{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    color: #808080;
+    font-size: 15px;
+    font-weight: 500;
+}
+.categoriasText2{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    color: #505050;
+    font-size: 15px;
+    font-weight: 800;
+    font-size: auto;
+}
+
+@media screen and (max-width: 900px) {
+    .adoteBox{
+        margin-left: 10%;
+        margin-right: 7%;
+           
+        &__title{
+            font-size: large;
+        }
+        &__subtitle{
+            font-size: smaller;
+        }
+    }
+    .animaisCard{
+        width: 270px;
+    }
+
+   
+    .h1{
+        font-size: 60px;
+    }
+    .h2{
+        font-size: medium;
+    }
+}
+
+
+// cor letra #505050
+// azul mais escuro #338BEF
+// azul médio #00B0FC
+// azul claro #47C1E6
