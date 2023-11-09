@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/adocaodoacao")
+@CrossOrigin("*")
 public class AdocaoDoacaoResource {
 
     @Autowired

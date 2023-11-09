@@ -17,6 +17,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/adotantedoador")
+@CrossOrigin("*")
 public class AdotanteDoadorResource {
 
     @Autowired
