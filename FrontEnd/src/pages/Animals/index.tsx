@@ -1,42 +1,44 @@
-
 import styles from "./Animais.module.scss";
-import TodosAnimais from "../../dados/animaisAll";
 import Footer from "../../components/Footer";
 import AnimalCards from "../../components/AnimalCards";
 import FullToolbar from "../../components/FullToolbar";
 import Buscador from "../../components/Buscador/bucador";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 export default function Animais() {
-
   /**/
-  const {valorBuscador, setValorBuscador} = useState("")
+  const { valorBuscador, setValorBuscador } = useState("");
 
   return (
     <div className={styles.back}>
-       <FullToolbar/>
+      <FullToolbar />
 
       <div className={styles.ongBox}>
-        <span className={styles.ongBox__title}>VAMOS AJUDAR NOSSOS BICHINHOS!</span>
-        <span className={styles.ongBox__subtitle}>
-          Caso você veja algum animal abandonado entre em contato imediatamente
-          com um abrigo de animais local ou um grupo de resgate, vamos ajudar
-          esses bichinhos peludos, faça o bem para nossos animais!
+        <span className={styles.ongBox__title}>
+          VAMOS AJUDAR NOSSOS BICHINHOS!
         </span>
+        <span className={styles.ongBox__subtitle}>
+          Tem interesse em ajudar nossos animais? Dê uma olhada nas Ongs que
+          fazem sua ajuda chegar aos animais!
+        </span>
+
+        <Link to={"/ongs"}>
+          <button>Quero Ajudar!</button>
+        </Link>
       </div>
 
       <div className={styles.br}></div>
 
       <div className={styles.searchBox}>
-        <Buscador valorBuscador={setValorBuscador}/>
+        <Buscador valorBuscador={setValorBuscador} />
       </div>
 
       <div className={styles.animais}>
-        <AnimalCards/>
+        <AnimalCards />
       </div>
 
-        <Footer/>
+      <Footer />
     </div>
   );
 }

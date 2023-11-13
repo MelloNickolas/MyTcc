@@ -31,8 +31,7 @@ const validationSchema = yup.object({
   cpf: yup
     .string()
     .required("CPF is required")
-    .test((value) => cpf.isValid(value)),
-
+    .test((value) => cpf.isValid(value))
 });
 
 
