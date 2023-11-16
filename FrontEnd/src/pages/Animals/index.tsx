@@ -24,7 +24,7 @@ export default function Animais() {
         </span>
 
         <Link to={"/ongs"}>
-          <button>Quero Ajudar!</button>
+          <button className={styles.button}>Quero Ajudar!</button>
         </Link>
       </div>
 

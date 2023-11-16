@@ -1,83 +1,92 @@
-.back{
-    background-color: rgb(247, 247, 247);
+.back {
+  background-color: rgb(247, 247, 247);
 }
-.list{
-    padding: 2rem 10%;
-    display: flex;
-    flex-direction: column;
+.list {
+  padding: 2rem 10%;
+  display: flex;
+  flex-direction: column;
 }
-.card{
-    padding: 1.5rem 3rem;
-    display: flex;
-    flex-direction: row;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
-    border-radius: 30px;
-    background-color: white;
+.card {
+  padding: 1.5rem 3rem;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+  border-radius: 30px;
+  background-color: white;
+  margin-bottom: 3rem;
+}
+.imgBox {
+  width: 300px;
+  display: flex;
+  border-radius: 50%;
 
-}
-.imgBox{
-    width: 300px;
-    display: flex;
-    border-radius: 50%;
-
-    &__image{
-        width: 100%;
-        border-radius: 50%;
-        display: flex;
-        box-shadow: 5px 5px 10px rgba(173, 173, 173, 0.212);
-    }
-}
-.textBox{
-    padding: 0rem 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  &__image {
     width: 100%;
-    gap: 35px;
-
-    &__name{
-        font-size: 50px;
-        font-family: 'Roboto', sans-serif;
-        color: #505050;
-        font-weight: 900;
-        text-transform: uppercase;
-        text-shadow: 2px 2px  #b1b1b1;
-
-    }
-    &__informations{
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        align-self: flex-start;
-        &__text{
-            display: flex;
-            flex-direction: row;
-            gap: 5px;
-            opacity: 0.5;
-        }
-        &__text svg{
-            opacity: 0.5;
-        }
-
-        &__insta{
-            display: flex;
-            flex-direction: row;
-            gap: 5px;
-            opacity: 0.5;
-            text-decoration: none;
-        }
-        &__insta:hover{
-            cursor: pointer;
-            color:  #2d7bf6;
-            opacity: 1;
-            text-decoration: underline #2d7bf6;
-        }
-        &__text svg{
-            opacity: 0.5;
-        }
-    }
+    border-radius: 50%;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(173, 173, 173, 0.212);
+  }
 }
+.nome {
+  font-size: 30px;
+  font-family: cursive;
+  color: #2d7bf6;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #afcdff;
+  width: 45%;
+}
+// .textBox{
+//     padding: 0rem 3rem;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+//     gap: 35px;
+
+//     &__name{
+//         font-size: 50px;
+//         font-family: 'Roboto', sans-serif;
+//         color: #505050;
+//         font-weight: 900;
+//         text-transform: uppercase;
+//         text-shadow: 2px 2px  #b1b1b1;
+
+//     }
+//     &__informations{
+//         display: flex;
+//         flex-direction: column;
+//         gap: 2px;
+//         text-align: center;
+//         justify-content: center;
+//         align-items: center;
+//         align-self: flex-start;
+//         &__text{
+//             display: flex;
+//             flex-direction: row;
+//             gap: 5px;
+//             opacity: 0.5;
+//         }
+//         &__text svg{
+//             opacity: 0.5;
+//         }
+
+//         &__insta{
+//             display: flex;
+//             flex-direction: row;
+//             gap: 5px;
+//             opacity: 0.5;
+//             text-decoration: none;
+//         }
+//         &__insta:hover{
+//             cursor: pointer;
+//             color:  #2d7bf6;
+//             opacity: 1;
+//             text-decoration: underline #2d7bf6;
+//         }
+//         &__text svg{
+//             opacity: 0.5;
+//         }
+//     }
+// }

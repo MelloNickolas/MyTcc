@@ -91,7 +91,7 @@ export default function CadastroAnimal(){
                     id="number"
                     type="text"
                     name="nomecidade"
-                    placeholder="Informe o nome da cidade do pet"
+                    placeholder="Informe a cidade do pet"
                     required
                     className={styles.inputBox__input}
                   ></input>
