@@ -14,6 +14,7 @@ import Login from "./pages/Login";
 import Teste from "./pages/Teste";
 import Buscador from "./components/Buscador/bucador";
 import Ongs from "./pages/Ongs";
+import CadastroAnimal from "./pages/CadastroAnimal";
 
 
 
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "ongs",
     element: <Ongs/>
+  },
+  {
+    path: "animais/cadastro",
+    element: <CadastroAnimal/>
   }
 
 ]);
