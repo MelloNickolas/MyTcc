@@ -3,8 +3,5 @@ export type Animal = {
     nomeanimal: string
     porte: string
     idade: number
-    cidadedoanimal: {
-        id: number
-        nomecidade: string
-    }
+    nomecidade: string
 }

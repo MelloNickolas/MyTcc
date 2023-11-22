@@ -1,9 +1,9 @@
 import styles from "./Toolbar.module.scss";
 import logo from "../../assets/logo.png";
-import { GoPerson } from "react-icons/go";
-import { PiDogLight } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import { FaHandsHelping } from "react-icons/fa";
+import { MdOutlinePets } from "react-icons/md";
+import { IoPerson } from "react-icons/io5";
 
 
 export default function EmptyToolbar() {
@@ -22,12 +22,12 @@ export default function EmptyToolbar() {
       
           <Link to={"/cadastro"}>
             <button className={styles.end__searchButton}>
-              <GoPerson size={"40px"} />
+              <IoPerson size={"40px"} />
             </button>
           </Link>
           <Link to={"/animais"} >
             <button className={styles.end__searchButton}>
-              <PiDogLight size={"40px"} />
+              <MdOutlinePets size={"40px"} />
             </button>
           </Link>
           <Link to={"/ongs"} >

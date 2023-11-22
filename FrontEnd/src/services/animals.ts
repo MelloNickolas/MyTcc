@@ -1,7 +1,13 @@
 import api from "./api";
 
-export async function getAnimals() {
-   const response = await api.get('/animal/filtro') 
+export async function getAnimals(pesquisa?: string) {
+   const response = await api.get(`/animal/filtro${pesquisa && ('?nomeanimal=' + pesquisa)}`) 
+
+   
 
    return response.data 
 }
+   /* 
+      ${pesquisa && ('?nomeanimal=' + pesquisa)}`
+      Esse comando serve para você conseguir filtra pelo nomeanimal
+   */

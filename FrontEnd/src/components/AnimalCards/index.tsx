@@ -4,29 +4,46 @@ import { Animal } from "../../types/animal";
 import nescau from "../../assets/animais/nescau.jpg";
 
 import styles from "./AnimalCards.module.scss";
+import { AxiosResponse } from "axios";
+import { json } from "stream/consumers";
 
-type PropsAnimalCards = {
-  valor: string
+/* ---------------------------------------------------------------- */
+interface Response extends AxiosResponse {
+  content: Animal[]
 }
+/* ----------- Criar uma tipação para a atualização ---------------- */
 
-export default function AnimalCards({valor}: PropsAnimalCards ) {
-  
+
+export default function AnimalCards() { 
   /* ---------------------------------------------------------------- */
-  const [data, setData] = useState<Animal[]>([]);
+  const [data, setData] = useState<Response>();
+  const [pesquisa, setPesquisa] = useState<string>()
 
   useEffect(() => {
-    getAnimals().then((response) => {
+    getAnimals(pesquisa).then((response) => {
+      console.log('update', response) // para mostrar no console.log
       setData(response);
     });
-  }, []);
+  }, [pesquisa]);
 
-  console.log(data);
   /* ----------------- End consume Api ------------------------------ */
 
   return (
     <>
-      {data.length > 0 ?  (   
-        data.map((animal) => (
+    <input type="text" placeholder="Pesquisa" onChange={(e: any) => {
+      const pesquisa = e.target.value; // Atualizar a pesquisa e setar o novo map
+      setPesquisa(pesquisa)
+    }}/>
+
+      {/* 
+        Essa data.content, serve somente para quando você está puxando o DTO
+        pois ele retorna um object com um content dentro, para você observar
+        isso basta dar um console.log(data)
+        Esse animal: Animal, serve para você atualizar o conteúdo com sua barra
+        de busca, puxando o axios response: para o seu service
+      */}
+      {data && data && data.content ?  (   
+        data.content.map((animal: Animal) => (
         <div className={styles.animaisCard} key={animal.id}>
           <div className={styles.imgBox}>
             <img
@@ -38,7 +55,7 @@ export default function AnimalCards({valor}: PropsAnimalCards ) {
             <div className={styles.imgBox__cidadeBox}>
               <div className={styles.cidadeContent}>
                 <h1 className={styles.cidadeContent__text}>
-                  {animal.cidadedoanimal.nomecidade}
+                  {animal.nomecidade}
                 </h1>
               </div>
             </div>

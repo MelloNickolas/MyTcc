@@ -12,9 +12,9 @@ import Ajuda from "./pages/Ajuda";
 import Animais from "./pages/Animals";
 import Login from "./pages/Login";
 import Teste from "./pages/Teste";
-import Buscador from "./components/Buscador/bucador";
 import Ongs from "./pages/Ongs";
 import CadastroAnimal from "./pages/CadastroAnimal";
+import AnimalDescription from "./pages/AnimalDescription";
 
 
 
@@ -56,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: "animais/cadastro",
     element: <CadastroAnimal/>
+  },
+  {
+    path: "animais/:id",
+    element: <AnimalDescription/>
   }
 
 ]);

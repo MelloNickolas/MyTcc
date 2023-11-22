@@ -2,13 +2,12 @@ import styles from "./Animais.module.scss";
 import Footer from "../../components/Footer";
 import AnimalCards from "../../components/AnimalCards";
 import FullToolbar from "../../components/FullToolbar";
-import Buscador from "../../components/Buscador/bucador";
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import FilterModal from "../../components/FilterModal";
 
 export default function Animais() {
-  /**/
-  const { valorBuscador, setValorBuscador } = useState("");
+
+  
 
   return (
     <div className={styles.back}>
@@ -30,12 +29,12 @@ export default function Animais() {
 
       <div className={styles.br}></div>
 
-      <div className={styles.searchBox}>
-        <Buscador valorBuscador={setValorBuscador} />
+      <div className={styles.filterBox}>
+        <FilterModal/>
       </div>
 
       <div className={styles.animais}>
-        <AnimalCards />
+        <AnimalCards/>
       </div>
 
       <Footer />
