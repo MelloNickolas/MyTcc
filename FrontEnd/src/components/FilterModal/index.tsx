@@ -1,20 +1,18 @@
-import { useState } from "react";
 import styles from "./FilterModal.module.scss"
 
-export default function FilterModal() {
-  const [modal, setModal] = useState(false);
+type propsModal = {
+    open: boolean
+}
 
-  const toggleModal = () => {
-    setModal(!modal);
-  };
-
+export default function FilterModal({ open }: propsModal) {
   return (
-    <>
-      <button onClick={toggleModal}>filter</button>
-
-      <div className={styles.back}>
-        ASKFHGIUFJGSAKJHGJK
-      </div>
+      <>
+    {open ? (
+    <div>
+    <h1>teste</h1>
+    </div>
+    ): null
+    }
     </>
   );
 }

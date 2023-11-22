@@ -3,11 +3,12 @@ import Footer from "../../components/Footer";
 import AnimalCards from "../../components/AnimalCards";
 import FullToolbar from "../../components/FullToolbar";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import FilterModal from "../../components/FilterModal";
 
 export default function Animais() {
-
-  
+  /* --------------------- Constructor Modal ------------------------ */
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={styles.back}>
@@ -30,11 +31,17 @@ export default function Animais() {
       <div className={styles.br}></div>
 
       <div className={styles.filterBox}>
-        <FilterModal/>
+
+        {/* ----------- Isso serve para abrir o modal ----------------*/}
+        <div>
+          <button onClick={() => setIsOpen(true)}>Open modal</button> 
+          <FilterModal open={isOpen}></FilterModal> 
+        </div>
+        {/* ------------------------------------------------------------*/}
       </div>
 
       <div className={styles.animais}>
-        <AnimalCards/>
+        <AnimalCards />
       </div>
 
       <Footer />
