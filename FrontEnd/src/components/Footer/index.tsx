@@ -16,7 +16,7 @@ export default function Footer() {
           </div>
           <div className={styles.cardText}>
             <h1 className={styles.cardText__text}>
-              AdotaLp é um programa criado em prol do bem estar dos animais,
+              PetMania é um programa criado em prol do bem estar dos animais,
               fomentando os laços do dono e de seu pet! Vamos juntos
               conscientizar as pessoas sobre como cuidar dos seus animais, vamos
               transformar esse mundo um lugar melhor para os animais!

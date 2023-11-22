@@ -9,7 +9,7 @@ const dados = [
         fotoAnimal: nescau,
         sexo: "M",
         idade: 0.3,
-        porte: "Grande",
+        porte: "Pequeno",
         cidade: "Macatuba",
         situacaoAnimal: "Bom estado"
       },
@@ -19,7 +19,7 @@ const dados = [
         fotoAnimal: princesa,
         sexo: "F",
         idade: 1,
-        porte: "Grande",
+        porte: "Pequeno",
         cidade: "Lençóis Paulista",
         situacaoAnimal: "Possui um grau médio de obesidade"
       },

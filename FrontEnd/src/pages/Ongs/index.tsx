@@ -21,8 +21,8 @@ export default function Ongs() {
                     className={styles.imgBox__image}
                   />
                 </div>
-                <div className={styles.nome}>
-                  <h1>{ongs.nomeong}</h1>
+                <div className={styles.nomeBox}>
+                  <span className={styles.nomeBox__nome}>{ongs.nomeong}</span>
                 </div>
               </div>
             );

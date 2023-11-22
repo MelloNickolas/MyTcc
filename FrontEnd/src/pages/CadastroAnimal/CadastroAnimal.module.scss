@@ -120,11 +120,18 @@
    
        &__input{
            margin: 0.0rem 0;
-           padding: 0.8rem 1.2rem;
+           padding: 0.8rem 2.2rem;
            border: none;
            border-radius: 10px;
            box-shadow: 1px 1px 6px #0000001c;
        }
+       &__input2{
+        margin: 0.0rem 0;
+        padding: 2rem 20em;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #0000001c;
+    }
        &__input:hover{
            background-color: rgb(236, 234, 234);
        }
@@ -140,6 +147,7 @@
            font-size: 0.75rem;
            font-weight: 600;
            color: #000000c0;
+           text-align: center;
        }
    }
    .continueButton{

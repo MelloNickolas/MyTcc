@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap');
 .back {
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(252, 252, 252);
 }
 .list {
   padding: 2rem 10%;
@@ -7,86 +8,44 @@
   flex-direction: column;
 }
 .card {
-  padding: 1.5rem 3rem;
   display: flex;
   flex-direction: row;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
   border-radius: 30px;
   background-color: white;
   margin-bottom: 3rem;
+  height: 300px;
+  width: 100%;
 }
 .imgBox {
-  width: 300px;
+  padding: 1rem 2rem;
+  width: 320px;
+  height: 100%;
   display: flex;
-  border-radius: 50%;
+  background-color: rgb(240, 240, 240);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  box-shadow: 2px 2px 5px rgba(173, 173, 173, 0.212);
 
   &__image {
     width: 100%;
-    border-radius: 50%;
+    width: 100%;
     display: flex;
-    box-shadow: 5px 5px 10px rgba(173, 173, 173, 0.212);
+   
   }
 }
-.nome {
-  font-size: 30px;
-  font-family: cursive;
-  color: #2d7bf6;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-shadow: 2px 2px #afcdff;
-  width: 45%;
+.nomeBox{
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 40%;
+  &__nome{
+    font-size: xx-large;
+    font-family: 'Permanent Marker', cursive;
+      text-transform: uppercase;
+      color: #2b7bf6;
+      text-align: center;
+  }
 }
-// .textBox{
-//     padding: 0rem 3rem;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     width: 100%;
-//     gap: 35px;
-
-//     &__name{
-//         font-size: 50px;
-//         font-family: 'Roboto', sans-serif;
-//         color: #505050;
-//         font-weight: 900;
-//         text-transform: uppercase;
-//         text-shadow: 2px 2px  #b1b1b1;
-
-//     }
-//     &__informations{
-//         display: flex;
-//         flex-direction: column;
-//         gap: 2px;
-//         text-align: center;
-//         justify-content: center;
-//         align-items: center;
-//         align-self: flex-start;
-//         &__text{
-//             display: flex;
-//             flex-direction: row;
-//             gap: 5px;
-//             opacity: 0.5;
-//         }
-//         &__text svg{
-//             opacity: 0.5;
-//         }
-
-//         &__insta{
-//             display: flex;
-//             flex-direction: row;
-//             gap: 5px;
-//             opacity: 0.5;
-//             text-decoration: none;
-//         }
-//         &__insta:hover{
-//             cursor: pointer;
-//             color:  #2d7bf6;
-//             opacity: 1;
-//             text-decoration: underline #2d7bf6;
-//         }
-//         &__text svg{
-//             opacity: 0.5;
-//         }
-//     }
-// }

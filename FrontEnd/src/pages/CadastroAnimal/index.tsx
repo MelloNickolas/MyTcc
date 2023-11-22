@@ -98,37 +98,20 @@ export default function CadastroAnimal(){
                 </div>
 
                 <div className={styles.inputBox}>
-                  <label htmlFor="password" className={styles.inputBox__label}>
+                  <label htmlFor="estado" className={styles.inputBox__label}>
                     {" "}
-                    Senha{" "}
+                    Como está o pet?{" "}
                   </label>
                   <input
-                    id="password"
-                    type="password"
-                    name="password"
-                    placeholder="Digite sua senha"
+                    type="text"
+                    name="estado"
+                    placeholder="Informe o estado do pet"
                     required
-                    className={styles.inputBox__input}
+                    className={styles.inputBox__input2}
                   ></input>
                 </div>
+               
 
-                <div className={styles.inputBox}>
-                  <label
-                    htmlFor="Confirmpassword"
-                    className={styles.inputBox__label}
-                  >
-                    {" "}
-                    Confirme sua senha{" "}
-                  </label>
-                  <input
-                    id="Confirmpassword"
-                    type="password"
-                    name="password"
-                    placeholder="Confirme sua senha"
-                    required
-                    className={styles.inputBox__input}
-                  ></input>
-                </div>
               </div>
               <div className={styles.continueButton}>
                 <button className={styles.continueButton__btn}>CADASTRAR ANIMAL</button>
