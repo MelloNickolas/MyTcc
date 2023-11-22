@@ -24,6 +24,12 @@ export default function Ongs() {
                 <div className={styles.nomeBox}>
                   <span className={styles.nomeBox__nome}>{ongs.nomeong}</span>
                 </div>
+                <div className={styles.classBox}>
+                  <div className={styles.classBox__class}>
+                    <GrMapLocation/>
+                    <h1>{ongs.localizacao}</h1>
+                  </div>
+                </div>
               </div>
             );
           })}

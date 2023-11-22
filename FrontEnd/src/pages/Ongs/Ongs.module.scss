@@ -16,10 +16,12 @@
   margin-bottom: 3rem;
   height: 300px;
   width: 100%;
+  justify-content: space-between;
 }
 .imgBox {
   padding: 1rem 2rem;
   width: 320px;
+  min-width: 320px;
   height: 100%;
   display: flex;
   background-color: rgb(240, 240, 240);
@@ -35,7 +37,7 @@
   }
 }
 .nomeBox{
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,5 +49,19 @@
       text-transform: uppercase;
       color: #2b7bf6;
       text-align: center;
+  }
+}
+.classBox{
+  width: 20%;
+  padding: 1.5rem 0rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__class{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: grey;
   }
 }
