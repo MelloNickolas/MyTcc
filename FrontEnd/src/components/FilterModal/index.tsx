@@ -8,9 +8,11 @@ export default function FilterModal({ open }: propsModal) {
   return (
       <>
     {open ? (
-    <div>
-    <h1>teste</h1>
-    </div>
+      <div className={styles.back}>
+        <div className={styles.container}>
+
+        </div>
+      </div>
     ): null
     }
     </>

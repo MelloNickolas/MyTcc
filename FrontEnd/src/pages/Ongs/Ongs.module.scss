@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
 .back {
   background-color: rgb(252, 252, 252);
 }
@@ -45,10 +45,11 @@
   width: 40%;
   &__nome{
     font-size: xx-large;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Kanit', sans-serif;
       text-transform: uppercase;
       color: #2b7bf6;
       text-align: center;
+      font-weight: 900;
   }
 }
 .classBox{

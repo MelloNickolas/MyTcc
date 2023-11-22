@@ -35,7 +35,6 @@ export default function Home() {
           <button className={styles.button}>Quero Ajudar!</button>
         </Link>
       </div>
-      <br />
 
       <div className={styles.adoteContainer}>
         <div className={styles.adoteBox}>
