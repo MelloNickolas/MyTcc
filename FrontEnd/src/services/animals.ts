@@ -16,3 +16,11 @@ export async function getAnimalById(id: string | undefined) {
       ${pesquisa && ('?nomeanimal=' + pesquisa)}`
       Esse comando serve para você conseguir filtra pelo nomeanimal
    */
+
+      export async function getThreeAnimals() {
+
+         const response = await api.get(`/animal/filtro?size=3`) 
+      
+         return response.data 
+      }
+      

@@ -18,6 +18,7 @@ public class Animal {
     private String sexo;
     private Integer idade;
     private String porte;
+    private String foto;
 
     public Integer getId() {
         return id;
@@ -57,6 +58,14 @@ public class Animal {
 
     public void setPorte(String porte) {
         this.porte = porte;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 
     @Override
@@ -119,14 +128,6 @@ public class Animal {
     }
 
     //--------------------------------------------------------------------------------------------------------------
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "fotosanimal")
-    private List<FotosAnimal> fotosdoanimal = new ArrayList<>();
-
-    public List<FotosAnimal> getFotosdoanimal() { return fotosdoanimal; }
-
-    public void setFotosdoanimal(List<FotosAnimal> fotosdoanimal) { this.fotosdoanimal = fotosdoanimal; }
 
     //--------------------------------------------------------------------------------------------------------------
 

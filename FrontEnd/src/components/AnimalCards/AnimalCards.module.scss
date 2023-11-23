@@ -130,13 +130,57 @@
     flex-direction: row;
     width: 100%;
     padding: 2rem 10%;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50%;
 
     &__pesquisa{
-        height: 40px;
-        width: 20%;
-        border: #2b7bf6 solid 1px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
-
+        margin: 0.0rem 0;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #0000001c;
     }
+    &__pesquisa:hover{
+        background-color: rgb(236, 234, 234);
+    }
+    &__pesquisa:focus-visible{
+        outline: 1px solid #2d7bf6;
+    }
+    &__pesquisa::placeholder{
+        color: #000000be;
+    }
+
+    &__filtro{
+        margin: 0.0rem 0;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #0000001c;
+        background-color: white;
+        color: #505050;
+        gap: 10px;
+        flex-direction: row;
+        display: flex;
+        font-family: cursive;
+        font-weight: 800;
+        justify-content: center;
+        align-items: center;
+    }
+    &__filtro:hover{
+        background-color: rgb(236, 234, 234);
+        cursor: pointer;
+    }
+    
+}
+
+.animaisBox{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 4rem;
+  gap: 20px;
 }

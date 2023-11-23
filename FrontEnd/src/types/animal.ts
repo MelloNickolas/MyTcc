@@ -4,4 +4,5 @@ export type Animal = {
     porte: string
     idade: number
     nomecidade: string
+    foto: string
 }

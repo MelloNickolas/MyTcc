@@ -11,7 +11,7 @@ export default function CadastroAnimal(){
             <OrangeToolbar/>
 
             
-      <div className={styles.back}>,
+      <div className={styles.back}>
         <div className={styles.container}>
           <div className={styles.formImage}>
             <img src={img} alt="cadastroanimal" className={styles.img} />

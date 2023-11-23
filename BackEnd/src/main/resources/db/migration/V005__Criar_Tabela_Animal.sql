@@ -5,5 +5,6 @@ create table animal(
     sexo char(1),
     idade int not null,
     porte varchar(15),
-    idcidade int not null
+    idcidade int not null,
+    foto varchar(300)
 );

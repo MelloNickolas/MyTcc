@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import { getAnimals } from "../../services/animals";
 import { Animal } from "../../types/animal";
 import nescau from "../../assets/animais/nescau.jpg";
-
+import { FaFilter } from "react-icons/fa";
 import styles from "./AnimalCards.module.scss";
 import { AxiosResponse } from "axios";
-import { json } from "stream/consumers";
-import { Route, Routes, useNavigate, useParams } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import FilterModal from "../FilterModal";
 
 /* ---------------------------------------------------------------- */
@@ -37,7 +36,7 @@ export default function AnimalCards() {
       <div className={styles.filterBox}>
         <input
           type="text"
-          placeholder="Pesquisa"
+          placeholder="Procurar"
           onChange={(e: any) => {
             const pesquisa = e.target.value; // Atualizar a pesquisa e setar o novo map
             setPesquisa(pesquisa);
@@ -47,7 +46,10 @@ export default function AnimalCards() {
 
         {/* ----------- Isso serve para abrir o modal ----------------*/}
         <div>
-          <button onClick={() => setIsOpen(true)} className={styles.filterBox__filtro}>Open modal</button>
+          <button onClick={() => setIsOpen(true)} className={styles.filterBox__filtro}>
+            <FaFilter/>
+            <h1>FILTROS</h1>
+            </button>
           <FilterModal open={isOpen} setIsOpen={setIsOpen}></FilterModal>
         </div>
         {/* ------------------------------------------------------------*/}
@@ -60,6 +62,7 @@ export default function AnimalCards() {
         Esse animal: Animal, serve para você atualizar o conteúdo com sua barra
         de busca, puxando o axios response: para o seu service
       */}
+      <div className={styles.animaisBox}>
       {data && data && data.content ? (
         data.content.map((animal: Animal) => (
           <div
@@ -107,6 +110,8 @@ export default function AnimalCards() {
       ) : (
         <p>Não há animais disponíveis</p>
       )}
+
+      </div>
     </>
   );
 }

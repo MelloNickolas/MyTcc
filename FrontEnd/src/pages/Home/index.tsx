@@ -2,11 +2,21 @@ import EmptyToolbar from "../../components/EmptyToolbar";
 import styles from "./Home.module.scss";
 import Banner from "../../assets/banner.png";
 // import AnimalDados from "../../dados/animais.json";
-import AnimalDados from "../../dados/animais";
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Animal } from '../../types/animal';
+import { getThreeAnimals } from "../../services/animals";
 
 export default function Home() {
+  const [data, setData] = useState<Animal[]>([]);
+  
+  useEffect(() => {
+    getThreeAnimals().then((response) => {
+      setData(response);
+    });
+  }, []);
+
   return (
     <body>
       <div className={styles.back}>
@@ -48,7 +58,7 @@ export default function Home() {
       {/* Fim do adoteContainer */}
 
       <div className={styles.animais}>
-        {AnimalDados.map((dados) => {
+        {/* {AnimalDados.map((dados) => {
           return (
             <div className={styles.animaisCard} key={dados.id}>
               <div className={styles.imgBox}>
@@ -87,7 +97,48 @@ export default function Home() {
               </div>
             </div>
           );
-        })}
+        })} */}
+
+        {data.map((dados: any) => (
+          <div className={styles.animaisCard} key={dados.id}>
+          <div className={styles.imgBox}>
+            <img
+              src={dados.fotoAnimal}
+              alt="Foto do animal"
+              className={styles.imgBox__img}
+            />
+            <div className={styles.imgBox__cidadeBox}>
+              <div className={styles.cidadeContent}>
+                <h1 className={styles.cidadeContent__text}>
+                  {dados.cidade}
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div className={styles.cardText}>
+            <div className={styles.cardTextStart}>
+              <h1 className={styles.cardTextStart__title}>
+                {" "}
+                {dados.nomeAnimal}{" "}
+              </h1>
+              <div className={styles.cardTextStart__line}>.</div>
+            </div>
+
+            <div className={styles.cardTextEnd}>
+              <div className={styles.categorias}>
+                <h1 className={styles.categoriasText}> IDADE - </h1>
+                <h1 className={styles.categoriasText2}> {dados.idade} </h1>
+              </div>
+              <div className={styles.categorias}>
+                <h1 className={styles.categoriasText}> PORTE - </h1>
+                <h1 className={styles.categoriasText2}> {dados.porte} </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        ))}
+
+
       </div>
       {/* Fim do animaisContainer */}
 
