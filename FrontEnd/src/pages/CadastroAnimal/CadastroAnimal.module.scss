@@ -24,15 +24,15 @@
        justify-content: center;
        align-items: center;
        padding: 1rem;
-       background-color:#619eff;
+       background-color:rgb(255, 127, 23);
        border-radius: 10px;
-       background-image: linear-gradient( to right, #00B0FC, transparent, #2d7bf6);
+       background-image: linear-gradient( to right, rgb(252, 156, 48), transparent,  rgb(252, 156, 48));
    }
    // azul mais escuro #338BEF
    // azul médio #00B0FC
    // azul claro #47C1E6
    .img{
-       width: 31rem;
+       width: 50rem;
    }
    .form{
        width: 50%;
@@ -65,13 +65,13 @@
            cursor: pointer;
            border-style: solid;
            border-width: 2px;
-           border-color: #2d7bf6;
-           color: #2d7bf6;
+           border-color: rgb(255, 127, 23);
+           color: rgb(255, 127, 23);
            width: 100%;
        }
        &__button:hover {
-           background-color: #2d7bf6;
-           border-color: #2d7bf6;
+           background-color: rgb(255, 127, 23);
+           border-color: rgb(255, 127, 23);
            color: white   ;
        }      
        &__text{
@@ -91,7 +91,7 @@
        display: block;
        width: 5rem;
        height: 0.3rem;
-       background-color: #2d7bf6;
+       background-color: rgb(255, 127, 23);
        margin: 2px auto;
        position: absolute;
        border-radius: 10px;
@@ -136,7 +136,7 @@
            background-color: rgb(236, 234, 234);
        }
        &__input:focus-visible{
-           outline: 1px solid #2d7bf6;
+           outline: 1px solid rgb(255, 127, 23);
        }
        &__input::placeholder{
            color: #000000be;
@@ -157,8 +157,8 @@
            margin-top: 2.5rem;
            border-style: solid;
            border-width: 2px;
-           border-color: #2d7bf6;
-           background-color: #2d7bf6;
+           border-color: rgb(255, 127, 23);
+           background-color: rgb(255, 127, 23);
            padding: 0.62rem;
            border-radius: 5px;
            cursor: pointer;
@@ -171,8 +171,8 @@
            background-color: white;
            border-style: solid;
            border-width: 2px;
-           border-color: #2d7bf6;
-           color: #2d7bf6;
+           border-color: rgb(255, 127, 23);
+           color: rgb(255, 127, 23);
        }
    }
    

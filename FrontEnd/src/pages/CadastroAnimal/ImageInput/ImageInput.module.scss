@@ -22,7 +22,7 @@
     box-shadow: 1px 1px 6px rgb(236, 234, 234);
 }
 .imageNotActive:hover{
-    border-color: #2d7bf6;
+    border-color: rgb(255, 127, 23);
 }
 .imageActive{
     height: 200px;
@@ -41,7 +41,7 @@
 
 
 .button{
-    background-color: #2d7bf6;
+    background-color: rgb(255, 127, 23);
     height: 35px;
     width: 35px;
     position: absolute;
@@ -63,6 +63,6 @@
 
 .button:hover {
     cursor: pointer;
-    background-color: #2d7af671;
+    background-color: rgb(255, 127, 23);
 }
   

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import endImg from "../../../assets/cadastro-login/icone_usuario.png";
+import endImg from "../../../assets/input-icon.png";
 import styles from "./ImageInput.module.scss"
 import { IoIosAdd } from "react-icons/io";
 

@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 .back{
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     position: absolute;
     z-index: 2;
     width: 100%;
-    height: 100%;
+    height: 154vh;
     top: 0;
     left: 0;
     justify-content: flex-end;
@@ -13,6 +15,52 @@
 .container{
     display: flex;  
     height: 100%;
-    width: 35%;
-    background-color: rgb(233, 232, 232);
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box{
+    padding: 2rem 3rem;
+    width: 100%;
+    height: 150px;
+
+    &__title{
+        font-size: x-large;
+        color: #505050;
+        font-weight: 900;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 20px;
+    }
+    &__check{
+        width: 15px;
+        height: 15px;
+        border-style: solid 1px #505050;
+    }
+    &__label{
+        font-family: cursive;
+        font-size: medium;
+        color: #505050; 
+        margin-right: 20px;
+    }
+    
+}
+
+.comeback {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.comeback svg {
+    color: #505050;
+}
+.comeback:hover svg {
+    color: #2d7bf6;
+    cursor: pointer;
+}
+.button{
+    background: none;
+    border: none;
 }

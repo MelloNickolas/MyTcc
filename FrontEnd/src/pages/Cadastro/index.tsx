@@ -6,6 +6,7 @@ import FullToolbar from "../../components/FullToolbar";
 import * as yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { cpf } from "cpf-cnpj-validator";
+import { useState } from 'react';
 
 const initialValues = {
   email: "",
@@ -35,13 +36,18 @@ const validationSchema = yup.object({
 });
 
 
-
 const handleSubmit = (values: any) => {
   console.log(values);
 };
 
 
 export default function Cadastro() {
+  const [nome, setNome] = useState("")
+  const [cpf, setCpf] = useState("")
+  const [email, setEmail] = useState("")
+  const [telefone, setTelefone] = useState("")
+  const [senha, setSenha] = useState("")
+
   return (
     <body>
       <FullToolbar/>

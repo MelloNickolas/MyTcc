@@ -1,20 +1,20 @@
 import styles from "./CadastroAnimal.module.scss";
-import FullToolbar from "../../components/FullToolbar";
-import cat from "../../assets/cadastro-login/Cat.png";
+import img from "../../assets/cadastroanimal/cadatroanimal.png";
 import ImageInput from "./ImageInput/imageinput";
 import { Link } from "react-router-dom";
+import OrangeToolbar from "../../components/OrangeToolbar";
 
 
 export default function CadastroAnimal(){
     return(
         <body>
-            <FullToolbar/>
+            <OrangeToolbar/>
 
             
-      <div className={styles.back}>
+      <div className={styles.back}>,
         <div className={styles.container}>
           <div className={styles.formImage}>
-            <img src={cat} alt="gato" className={styles.img} />
+            <img src={img} alt="cadastroanimal" className={styles.img} />
           </div>
 
           <div className={styles.form}>
@@ -100,7 +100,7 @@ export default function CadastroAnimal(){
                 <div className={styles.inputBox}>
                   <label htmlFor="estado" className={styles.inputBox__label}>
                     {" "}
-                    Como está o pet?{" "}
+                    Qual a raça e como está o pet?{" "}
                   </label>
                   <input
                     type="text"
