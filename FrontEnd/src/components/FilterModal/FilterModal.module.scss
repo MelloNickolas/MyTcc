@@ -9,8 +9,6 @@
     height: 154vh;
     top: 0;
     left: 0;
-    justify-content: flex-end;
-    align-items: flex-end;
 }
 .container{
     display: flex;  
@@ -58,9 +56,9 @@
 }
 .comeback:hover svg {
     color: #2d7bf6;
-    cursor: pointer;
 }
 .button{
     background: none;
     border: none;
+    cursor: pointer;
 }

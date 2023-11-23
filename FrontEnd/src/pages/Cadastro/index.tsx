@@ -6,7 +6,7 @@ import FullToolbar from "../../components/FullToolbar";
 import * as yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { cpf } from "cpf-cnpj-validator";
-import { useState } from 'react';
+import { useState } from "react";
 
 const initialValues = {
   email: "",
@@ -32,25 +32,25 @@ const validationSchema = yup.object({
   cpf: yup
     .string()
     .required("CPF is required")
-    .test((value) => cpf.isValid(value))
+    .test((value) => cpf.isValid(value)),
 });
-
 
 const handleSubmit = (values: any) => {
   console.log(values);
 };
 
-
 export default function Cadastro() {
-  const [nome, setNome] = useState("")
-  const [cpf, setCpf] = useState("")
-  const [email, setEmail] = useState("")
-  const [telefone, setTelefone] = useState("")
-  const [senha, setSenha] = useState("")
+  const [nome, setNome] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [senha, setSenha] = useState("");
+  const [confirmarsenha, setconfirmarSenha] = useState("");
+  
 
   return (
     <body>
-      <FullToolbar/>
+      <FullToolbar />
 
       <div className={styles.back}>
         <div className={styles.container}>
@@ -91,6 +91,9 @@ export default function Cadastro() {
                     name="nome"
                     placeholder="Digite seu nome"
                     required
+                    onChange={(e) => {
+                      setNome(e.target.value)
+                    }}
                     className={styles.inputBox__input}
                   ></input>
                 </div>
@@ -132,6 +135,9 @@ export default function Cadastro() {
                     name="email"
                     placeholder="Digite seu email"
                     required
+                    onChange={(e) => {
+                      setEmail(e.target.value)
+                    }}
                     className={styles.inputBox__input}
                   ></input>
                 </div>
@@ -147,6 +153,9 @@ export default function Cadastro() {
                     name="number"
                     placeholder="(xx) xxxxx-xxxx"
                     required
+                    onChange={(e) => {
+                      setTelefone(e.target.value)
+                    }}
                     className={styles.inputBox__input}
                   ></input>
                 </div>
@@ -162,6 +171,9 @@ export default function Cadastro() {
                     name="password"
                     placeholder="Digite sua senha"
                     required
+                    onChange={(e) => {
+                      setSenha(e.target.value)
+                    }}
                     className={styles.inputBox__input}
                   ></input>
                 </div>
@@ -180,6 +192,9 @@ export default function Cadastro() {
                     name="password"
                     placeholder="Confirme sua senha"
                     required
+                    onChange={(e) => {
+                      setconfirmarSenha(e.target.value)
+                    }}
                     className={styles.inputBox__input}
                   ></input>
                 </div>

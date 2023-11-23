@@ -1,13 +1,14 @@
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 import styles from "./FilterModal.module.scss";
-import { Link } from "react-router-dom";
 
 type propsModal = {
   open: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 };
 
-export default function FilterModal({ open }: propsModal) {
+export default function FilterModal({ open, setIsOpen }: propsModal) {
+
   return (
     <>
       {open ? (
@@ -16,7 +17,7 @@ export default function FilterModal({ open }: propsModal) {
 
             
               <div className={styles.comeback}>
-                <button className={styles.button}>
+                <button className={styles.button} onClick={() => { setIsOpen(false) }}>
                   <AiOutlineCloseCircle size={"35px"} />
                 </button>
               </div>

@@ -125,3 +125,18 @@
     font-weight: 800;
     font-size: auto;
 }
+.filterBox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2rem 10%;
+    justify-content: space-between;
+
+    &__pesquisa{
+        height: 40px;
+        width: 20%;
+        border: #2b7bf6 solid 1px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
+
+    }
+}
