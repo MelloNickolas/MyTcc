@@ -4,10 +4,10 @@ public class AnimalFilter {
 
     private String nomeanimal;
     private String sexo;
-    private Integer idade;
+    private String idade;
     private String porte;
+    private String foto;
     //FK's
-    private String descricao;
     private String nomecidade;
 
     public String getNomeanimal() {
@@ -26,11 +26,11 @@ public class AnimalFilter {
         this.sexo = sexo;
     }
 
-    public Integer getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 
@@ -42,13 +42,6 @@ public class AnimalFilter {
         this.porte = porte;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
 
     public String getNomecidade() {
         return nomecidade;
@@ -56,5 +49,13 @@ public class AnimalFilter {
 
     public void setNomecidade(String nomecidade) {
         this.nomecidade = nomecidade;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 }

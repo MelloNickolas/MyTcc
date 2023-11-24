@@ -1,7 +1,5 @@
 alter table cidade add constraint FK_estado_cidade foreign key(idestado) references estado(id);
 alter table adotantedoador add constraint FK_cidade_adotantedoador foreign key(idcidade) references cidade(id);
-alter table situacaoanimal add constraint FK_animal_situacaoanimal foreign key(idanimal) references animal(id);
-alter table animal add constraint FK_raca_animal foreign key(idraca) references raca(id);
 alter table adocaodoacao add constraint FK_animal_adocaodoacao foreign key(idanimal) references animal(id);
 alter table adocaodoacao add constraint FK_adotante_adocaodoacao foreign key(idadotante) references adotantedoador(id);
 alter table adocaodoacao add constraint FK_doador_adocaodoacao foreign key(iddoador) references adotantedoador(id);
@@ -269,18 +267,11 @@ values ('Nickolas Mello', '76547682132', '(14)99821-0915', 'nickolasmello@gmail.
 insert into adotantedoador(nome, cpf, telefone, email, dtnascimento, endereco, idcidade)
 values ('Guilherme Martos', '1154203610', '(14)99278-9520', 'guimartos@gmail.com', '2000-03-08', 'Rua do Girassol, 160', 4);
 
-insert into raca(descricao) values ('Pinscher');
-insert into raca(descricao) values ('Labrador');
-
-insert into animal(nomeanimal, sexo, idade, porte, idraca, idcidade, foto) values ('Thanos', 'M', 3, 'Grande', 1, 2, "https://img.freepik.com/fotos-gratis/o-labrador-retriever-marrom-no-branco_155003-11361.jpg?w=740&t=st=1700760245~exp=1700760845~hmac=6e650258643b01df94a314bddaa0a04bf0d92c21034799a5b1ebeb2d12790875");
-insert into animal(nomeanimal, sexo, idade, porte, idraca, idcidade, foto) values ('Gael', 'M', 2, 'Médio', 2, 4,  "https://img.freepik.com/psd-gratuitas/cena-fofa-de-cachorro-marrom-e-branco_23-2150179279.jpg?w=740&t=st=1700760267~exp=1700760867~hmac=79f1b051d2cfc8f992137b48422ccef3d3973c6a99365f7a095e79cb6f3ab0a5");
-insert into animal(nomeanimal, sexo, idade, porte, idraca, idcidade, foto) values ('Kiwi', 'M', 0.4, 'Pequeno', 1, 3, "https://img.freepik.com/fotos-gratis/lindo-cachorrinho-de-cachorro-corgi-calmamente-posando-isolado-sobre-o-fundo-branco-do-estudio-parece-feliz_155003-46197.jpg?w=1380&t=st=1700760334~exp=1700760934~hmac=5a825651e0cf2f6f6a09855012ea7618edf303cabdcd04d53d184b354eca2fd6");
-insert into animal(nomeanimal, sexo, idade, porte, idraca, idcidade, foto) values ('Julio', 'M', 5, 'Gigante', 1, 3, "https://img.freepik.com/fotos-gratis/bernese-mountain-dog-fechar-o-retrato-em-fundo-escuro-fechar-o-retrato-em-fundo-escuro_475641-2060.jpg?w=1380&t=st=1700760308~exp=1700760908~hmac=be99a084fe6174d94ce2f004a0605fea9d72c72d4cdc513776ec166b7f0a1513");
-insert into animal(nomeanimal, sexo, idade, porte, idraca, idcidade, foto) values ('Afonso', 'M', 0.2, 'Pequeno', 1, 3, "https://img.freepik.com/psd-gratuitas/retrato-de-solo-adoravel-cachorro-beagle_53876-73998.jpg?w=740&t=st=1700760343~exp=1700760943~hmac=eac1a42ce617dba4f73e584153838a2e1cfd38528c2d3d69b4f59b3e13869397");
-
-insert into situacaoanimal(situacao, idanimal) values ('Bom Estado', 1);
-insert into situacaoanimal(situacao, idanimal) values ('Vacinas ok, bom estado', 2);
-insert into situacaoanimal(situacao, idanimal) values ('Bom Estado', 3);
+insert into animal(nomeanimal, sexo, idade, porte, idcidade, foto) values ('Kiwi', 'M', '1 ano e 3 meses', 'Pequeno',  3, 'https://www.sanoldog.com.br/wp-content/uploads/2017/07/SD_BLOG_DeixarOPetSozinho-1-1-768x572.png');
+insert into animal(nomeanimal, sexo, idade, porte, idcidade, foto) values ('Thanos', 'M', '1 ano e 3 meses', 'Grande',  2, 'https://i1.wp.com/www.depoisdosquinze.com/app/uploads/2018/01/cuidados-pet-sozinho-em-casa2.jpg?fit=1080%2C1350&ssl=1');
+insert into animal(nomeanimal, sexo, idade, porte, idcidade, foto) values ('Gael', 'M','1 ano e 3 meses', 'Médio',  4,  'https://t1.ea.ltmcdn.com/pt/posts/8/7/8/dicas_para_deixar_o_cachorro_sozinho_em_casa_20878_600_square.jpg');
+insert into animal(nomeanimal, sexo, idade, porte, idcidade, foto) values ('Julio', 'M', '1 ano e 3 meses', 'Gigante',  3, 'https://www.racoesreis.com.br/wordpress/wp-content/uploads/post_thumbnail-127c535d1ec60815f0f26b7f4a3b9c3f.jpeg');
+insert into animal(nomeanimal, sexo, idade, porte, idcidade, foto) values ('Afonso', 'M', '1 ano e 3 meses', 'Pequeno',  3, 'https://www.shopveterinario.com.br/blog/wp-content/uploads/2020/09/hidrocefalia-em-caes-artigo-1-300x300.jpg');
 
 insert into adocaodoacao(iddoador, idadotante, idanimal, dataadocao) values (1, 2, 1, '2023-02-10');
 insert into adocaodoacao(iddoador, idadotante, idanimal, dataadocao) values (2, 3, 2, '2023-03-06');

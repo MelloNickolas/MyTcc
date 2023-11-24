@@ -103,7 +103,7 @@ export default function Home() {
           <div className={styles.animaisCard} key={dados.id}>
           <div className={styles.imgBox}>
             <img
-              src={dados.fotoAnimal}
+              src={dados.foto}
               alt="Foto do animal"
               className={styles.imgBox__img}
             />
@@ -119,7 +119,7 @@ export default function Home() {
             <div className={styles.cardTextStart}>
               <h1 className={styles.cardTextStart__title}>
                 {" "}
-                {dados.nomeAnimal}{" "}
+                {dados.nomeanimal}{" "}
               </h1>
               <div className={styles.cardTextStart__line}>.</div>
             </div>

@@ -13,7 +13,7 @@ export default function CadastroAnimal() {
 
   const [nome, setNome] = useState<string>("")
   const [porte, setPorte] = useState<string>("")
-  const [idade, setIdade] = useState<number>(1)
+  const [idade, setIdade] = useState<string>("")
   const [nomecidade, setNomecidade] = useState<string>("")
   const [foto, setFoto] = useState<string>("")
   const [sexo, setSexo] = useState<string>("")
@@ -21,15 +21,12 @@ export default function CadastroAnimal() {
   const submit = (e: any) => {
     e.preventDefault()
     const data: Animal = {
-      id: 1,
       nomeanimal: nome,
       porte,
       idade,
       nomecidade,
       foto,
       sexo,
-      idcidade: 1,
-      descricao: "Teste" 
     }
     api.post('/animal/saveAnimal', data).then((response) => {
       console.log(response)
@@ -52,13 +49,6 @@ export default function CadastroAnimal() {
               <div className={styles.formHeader}>
                 <div className={styles.title}>
                   <h1 className={styles.h1}>BEM-VINDO!</h1>
-                </div>
-                <div className={styles.loginButton}>
-                  <Link to={"/login"}>
-                    <button className={styles.loginButton__button}>
-                      <p className={styles.loginButton__text}>ENTRAR</p>
-                    </button>
-                  </Link>
                 </div>
               </div>
 
@@ -128,7 +118,7 @@ export default function CadastroAnimal() {
                     Idade{""}
                   </label>
                   <input
-                    type="number"
+                    type="text"
                     name="idade"
                     placeholder="Informe a idade do seu pet"
                     required

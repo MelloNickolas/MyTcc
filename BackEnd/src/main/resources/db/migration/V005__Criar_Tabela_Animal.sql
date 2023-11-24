@@ -1,10 +1,9 @@
 create table animal(
     id int not null primary key auto_increment,
-    idraca int not null,
     nomeanimal varchar(40),
     sexo char(1),
-    idade int not null,
+    idade varchar(50),
     porte varchar(15),
     idcidade int not null,
-    foto varchar(300)
+    foto varchar(700)
 );

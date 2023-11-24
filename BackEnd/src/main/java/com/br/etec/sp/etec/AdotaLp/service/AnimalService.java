@@ -13,8 +13,8 @@ public class AnimalService {
     @Autowired
     private AnimalRepository animalrepositoy;
 
-    public Animal saveAnimal(Animal animal){
-        return animalrepositoy.save(animal);
+    public Animal saveAnimal(Animal animalDTO){
+        return animalrepositoy.save(animalDTO);
     }
 
     public List<Animal> saveAllAnimal(List<Animal> animalList){

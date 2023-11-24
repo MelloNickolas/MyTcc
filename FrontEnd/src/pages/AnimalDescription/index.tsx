@@ -34,7 +34,7 @@
               </Link>
             </div>
 
-                <img src={nescau} alt="" className={styles.imageBox__image} />
+                <img src={data?.foto} alt="" className={styles.imageBox__image} />
                 <h1 className={styles.imageBox__text}>
                   {data ? data.nomeanimal : "Não tem nenhum nome"}
                 </h1>
@@ -72,7 +72,7 @@
                     <h1 className={styles.box__title}>CIDADE :</h1>
 
                     <h2 className={styles.box__context}>
-                      {data ? data.nomecidade : "Cidade Não definido"}
+                      {data?.nomecidade}
                     </h2>
                   </div>
                 </div>

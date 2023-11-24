@@ -3,6 +3,7 @@ package com.br.etec.sp.etec.AdotaLp.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ public class Animal {
     private Integer id;
     private String nomeanimal;
     private String sexo;
-    private Integer idade;
+    private String idade;
     private String porte;
     private String foto;
 
@@ -44,11 +45,11 @@ public class Animal {
         this.sexo = sexo;
     }
 
-    public Integer getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 
@@ -81,36 +82,6 @@ public class Animal {
         return Objects.hash(id);
     }
 
-
-    //--------------------------------------------------------------------------------------------------------------
-
-
-    @ManyToOne
-    @JoinColumn(name = "idraca")
-    private Raca raca;
-
-    public Raca getRaca() {
-        return raca;
-    }
-
-    public void setRaca(Raca raca) {
-        this.raca = raca;
-    }
-
-
-    //--------------------------------------------------------------------------------------------------------------
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "situacaoanimal")
-    private List<SituacaoAnimal> animalsituacao = new ArrayList<>();
-
-    public List<SituacaoAnimal> getAnimalsituacao() {
-        return animalsituacao;
-    }
-
-    public void setAnimalsituacao(List<SituacaoAnimal> animalsituacao) {
-        this.animalsituacao = animalsituacao;
-    }
 
 
     //--------------------------------------------------------------------------------------------------------------

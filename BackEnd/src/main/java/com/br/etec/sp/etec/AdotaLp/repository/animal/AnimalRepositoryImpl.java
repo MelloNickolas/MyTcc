@@ -37,7 +37,7 @@ public class AnimalRepositoryImpl implements  AnimalRepositoryQuery{
                 root.get("sexo"),
                 root.get("idade"),
                 root.get("porte"),
-                root.get("raca").get("descricao"),
+                root.get("foto"),
                 root.get("cidadedoanimal").get("nomecidade")
         ));
 
@@ -90,8 +90,10 @@ public class AnimalRepositoryImpl implements  AnimalRepositoryQuery{
             predicates.add(builder.like(builder.lower(root.get("sexo")),
                     "%" + animalfilter.getSexo().toLowerCase() + "%"));
         }
-        if(animalfilter.getIdade() != null){
-            predicates.add(builder.equal(root.get("idade"), animalfilter.getIdade()));
+
+        if (!StringUtils.isEmpty(animalfilter.getIdade())){
+            predicates.add(builder.like(builder.lower(root.get("idade")),
+                    "%" + animalfilter.getIdade().toLowerCase() + "%"));
         }
 
         if (!StringUtils.isEmpty(animalfilter.getPorte())){
@@ -99,14 +101,16 @@ public class AnimalRepositoryImpl implements  AnimalRepositoryQuery{
                     "%" + animalfilter.getPorte().toLowerCase() + "%"));
         }
 
-        if (!StringUtils.isEmpty(animalfilter.getDescricao())){
-            predicates.add(builder.like(builder.lower(root.get("raca").get("descricao")),
-                    "%" + animalfilter.getDescricao().toLowerCase() + "%"));
+        if (!StringUtils.isEmpty(animalfilter.getFoto())){
+            predicates.add(builder.like(builder.lower(root.get("foto")),
+                    "%" + animalfilter.getFoto().toLowerCase() + "%"));
         }
+
         if (!StringUtils.isEmpty(animalfilter.getNomecidade())){
             predicates.add(builder.like(builder.lower(root.get("cidadedoanimal").get("nomecidade")),
                     "%" + animalfilter.getNomecidade().toLowerCase() + "%"));
         }
+
 
         return predicates.toArray(new Predicate[predicates.size()]);
     }

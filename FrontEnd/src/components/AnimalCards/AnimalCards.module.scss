@@ -24,7 +24,8 @@
     opacity: 0.8;
 }
 .imgBox{
-    height: 50%;
+    height: 300px;
+    
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -80,6 +81,7 @@
     flex-direction: column;
     gap: 5px;
 
+
     &__title{
         font-size: 20px;
         font-family: 'Roboto', sans-serif;
@@ -101,6 +103,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 12px;
+    padding: 1rem 0rem;
 }
 .categorias{
     display: flex;
@@ -131,7 +134,7 @@
     width: 100%;
     padding: 2rem 10%;
     justify-content: center;
-    gap: 50%;
+    gap: 20px;
 
     &__pesquisa{
         margin: 0.0rem 0;
@@ -168,6 +171,24 @@
     }
     &__filtro:hover{
         background-color: rgb(236, 234, 234);
+        cursor: pointer;
+    }
+
+    &__add{
+        margin: 0.0rem 0;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #0000001c;
+        background-color: white;
+        color: #505050;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: underline white;
+    }
+    &__add:hover{
+        background-color: rgb(236, 234, 234);
+        text-decoration: underline rgb(236, 234, 234);
         cursor: pointer;
     }
     

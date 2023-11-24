@@ -5,19 +5,19 @@ public class AnimalDTO {
     private Integer id;
     private String nomeanimal;
     private String sexo;
-    private Integer idade;
+    private String idade;
     private String porte;
+    private String foto;
     //FK's
-    private String descricao;
     private String nomecidade;
 
-        public AnimalDTO(Integer id, String nomeanimal, String sexo, Integer idade, String porte, String descricao, String nomecidade) {
+    public AnimalDTO(Integer id, String nomeanimal, String sexo, String idade, String porte, String foto, String nomecidade) {
         this.id = id;
         this.nomeanimal = nomeanimal;
         this.sexo = sexo;
         this.idade = idade;
         this.porte = porte;
-        this.descricao = descricao;
+        this.foto = foto;
         this.nomecidade = nomecidade;
     }
 
@@ -45,11 +45,11 @@ public class AnimalDTO {
         this.sexo = sexo;
     }
 
-    public Integer getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 
@@ -61,12 +61,12 @@ public class AnimalDTO {
         this.porte = porte;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getFoto() {
+        return foto;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 
     public String getNomecidade() {

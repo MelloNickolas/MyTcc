@@ -5,7 +5,7 @@ import nescau from "../../assets/animais/nescau.jpg";
 import { FaFilter } from "react-icons/fa";
 import styles from "./AnimalCards.module.scss";
 import { AxiosResponse } from "axios";
-import { useNavigate} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import FilterModal from "../FilterModal";
 
 /* ---------------------------------------------------------------- */
@@ -30,6 +30,7 @@ export default function AnimalCards() {
   /* ----------------- End consume Api ------------------------------ */
 
   const [isOpen, setIsOpen] = useState(false);
+  console.log(data)
 
   return (
     <>
@@ -52,6 +53,10 @@ export default function AnimalCards() {
             </button>
           <FilterModal open={isOpen} setIsOpen={setIsOpen}></FilterModal>
         </div>
+
+          <Link to={"/animais/cadastro"}>
+        <button className={styles.filterBox__add}>+</button>
+        </Link>
         {/* ------------------------------------------------------------*/}
       </div>
 
@@ -72,10 +77,11 @@ export default function AnimalCards() {
           >
             <div className={styles.imgBox}>
               <img
-                src={nescau}
+                src={animal.foto}
                 alt="Foto do animal"
                 className={styles.imgBox__img}
               />
+              
 
               <div className={styles.imgBox__cidadeBox}>
                 <div className={styles.cidadeContent}>
