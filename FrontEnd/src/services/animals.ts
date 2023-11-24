@@ -17,10 +17,18 @@ export async function getAnimalById(id: string | undefined) {
       Esse comando serve para você conseguir filtra pelo nomeanimal
    */
 
-      export async function getThreeAnimals() {
+export async function getThreeAnimals() {
 
-         const response = await api.get(`/animal/filtro?size=3`) 
+   const response = await api.get(`/animal/filtro?size=3`) 
       
-         return response.data 
-      }
+   return response.data 
+}
+
+export async function postAnimal() {
+
+   const response = await api.post(`/animal/saveAnimal`) 
+      
+   return response.data 
+}
+
       

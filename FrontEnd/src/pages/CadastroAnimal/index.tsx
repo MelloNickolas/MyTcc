@@ -36,6 +36,21 @@ export default function CadastroAnimal(){
                 <div className={styles.avatarBox}>
                   <ImageInput />
                 </div>
+
+                <div className={styles.inputBox}>
+                  <label htmlFor="cidadedoanimal" className={styles.inputBox__label}>
+                    {" "}
+                    Link da Imagem{" "}
+                  </label>
+                  <input
+                    id="number"
+                    type="text"
+                    name="porte"
+                    placeholder="Link da imagem"
+                    required
+                    className={styles.inputBox__input}
+                  ></input>
+                </div>
               </div>
 
               <div className={styles.inputGroup}>
@@ -85,13 +100,13 @@ export default function CadastroAnimal(){
                 <div className={styles.inputBox}>
                   <label htmlFor="cidadedoanimal" className={styles.inputBox__label}>
                     {" "}
-                    Cidade do Animal{" "}
+                    Porte do animal{" "}
                   </label>
                   <input
                     id="number"
                     type="text"
-                    name="nomecidade"
-                    placeholder="Informe a cidade do pet"
+                    name="porte"
+                    placeholder="Informe o porte do pet"
                     required
                     className={styles.inputBox__input}
                   ></input>
@@ -100,7 +115,7 @@ export default function CadastroAnimal(){
                 <div className={styles.inputBox}>
                   <label htmlFor="estado" className={styles.inputBox__label}>
                     {" "}
-                    Qual a raça e como está o pet?{" "}
+                    Qual o estado do seu pet ?{" "}
                   </label>
                   <input
                     type="text"
@@ -110,6 +125,8 @@ export default function CadastroAnimal(){
                     className={styles.inputBox__input2}
                   ></input>
                 </div>
+
+
                
 
               </div>

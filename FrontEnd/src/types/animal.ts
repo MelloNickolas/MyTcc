@@ -5,4 +5,5 @@ export type Animal = {
     idade: number
     nomecidade: string
     foto: string
+    sexo: string
 }
