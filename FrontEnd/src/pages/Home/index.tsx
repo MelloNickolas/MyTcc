@@ -13,7 +13,7 @@ export default function Home() {
   
   useEffect(() => {
     getThreeAnimals().then((response) => {
-      setData(response);
+      setData(response.content);
     });
   }, []);
 
@@ -99,7 +99,7 @@ export default function Home() {
           );
         })} */}
 
-        {data.map((dados: any) => (
+        {data && data.map((dados: any) => (
           <div className={styles.animaisCard} key={dados.id}>
           <div className={styles.imgBox}>
             <img

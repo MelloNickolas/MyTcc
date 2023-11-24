@@ -11,7 +11,7 @@ public class AnimalDTO {
     private String descricao;
     private String nomecidade;
 
-    public AnimalDTO(Integer id, String nomeanimal, String sexo, Integer idade, String porte, String descricao, String nomecidade) {
+        public AnimalDTO(Integer id, String nomeanimal, String sexo, Integer idade, String porte, String descricao, String nomecidade) {
         this.id = id;
         this.nomeanimal = nomeanimal;
         this.sexo = sexo;

@@ -161,3 +161,20 @@
     top: 0;
     border-radius: 10px;
   }
+
+  .comeback {
+    position: absolute;
+    display: flex;
+    align-self: flex-start;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px 2px;
+    margin-bottom: 34%;
+    margin-left: 2%;
+  }
+  .comeback svg {
+    color: #505050;
+  }
+  .comeback:hover {
+    background-color: rgb(199, 199, 199);
+  }

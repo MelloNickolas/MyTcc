@@ -1,6 +1,7 @@
 import api from "./api";
 
 export async function getAnimals(pesquisa?: string) {
+   pesquisa = pesquisa || ' '
 
    const response = await api.get(`/animal/filtro${pesquisa && ('?nomeanimal=' + pesquisa)}`) 
 

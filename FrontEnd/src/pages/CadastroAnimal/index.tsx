@@ -3,14 +3,44 @@ import img from "../../assets/cadastroanimal/cadatroanimal.png";
 import ImageInput from "./ImageInput/imageinput";
 import { Link } from "react-router-dom";
 import OrangeToolbar from "../../components/OrangeToolbar";
+import { SyntheticEvent, useState } from "react";
+import { Animal } from '../../types/animal'
+import axios from "axios";
+
+import api from "../../services/api";
+
+export default function CadastroAnimal() {
+
+  const [nome, setNome] = useState<string>("")
+  const [porte, setPorte] = useState<string>("")
+  const [idade, setIdade] = useState<number>(1)
+  const [nomecidade, setNomecidade] = useState<string>("")
+  const [foto, setFoto] = useState<string>("")
+  const [sexo, setSexo] = useState<string>("")
+
+  const submit = (e: any) => {
+    e.preventDefault()
+    const data: Animal = {
+      id: 1,
+      nomeanimal: nome,
+      porte,
+      idade,
+      nomecidade,
+      foto,
+      sexo,
+      idcidade: 1,
+      descricao: "Teste" 
+    }
+    api.post('/animal/saveAnimal', data).then((response) => {
+      console.log(response)
+    })
+  }
+
+  return (
+    <body>
+      <OrangeToolbar />
 
 
-export default function CadastroAnimal(){
-    return(
-        <body>
-            <OrangeToolbar/>
-
-            
       <div className={styles.back}>
         <div className={styles.container}>
           <div className={styles.formImage}>
@@ -18,7 +48,7 @@ export default function CadastroAnimal(){
           </div>
 
           <div className={styles.form}>
-            <form action="#">
+            <form onSubmit={submit}>
               <div className={styles.formHeader}>
                 <div className={styles.title}>
                   <h1 className={styles.h1}>BEM-VINDO!</h1>
@@ -48,6 +78,9 @@ export default function CadastroAnimal(){
                     name="porte"
                     placeholder="Link da imagem"
                     required
+                    onChange={(e: any) => {
+                      setFoto(e.target.value)
+                    }}
                     className={styles.inputBox__input}
                   ></input>
                 </div>
@@ -66,6 +99,9 @@ export default function CadastroAnimal(){
                     placeholder="Digite o nome do pet"
                     required
                     className={styles.inputBox__input}
+                    onChange={(e: any) => {
+                      setNome(e.target.value)
+                    }}
                   ></input>
                 </div>
 
@@ -74,13 +110,16 @@ export default function CadastroAnimal(){
                     {" "}
                     Porte{" "}
                   </label>
-                    <input
-                        name="porte"
-                        type="text"
-                        placeholder="Informe o porte do seu pet"
-                        required
-                        className={styles.inputBox__input}
-                    ></input>
+                  <input
+                    name="porte"
+                    type="text"
+                    placeholder="Informe o porte do seu pet"
+                    required
+                    className={styles.inputBox__input}
+                    onChange={(e: any) => {
+                      setPorte(e.target.value)
+                    }}
+                  ></input>
                 </div>
 
                 <div className={styles.inputBox}>
@@ -94,49 +133,37 @@ export default function CadastroAnimal(){
                     placeholder="Informe a idade do seu pet"
                     required
                     className={styles.inputBox__input}
+                    onChange={(e: any) => {
+                      setIdade(e.target.value)
+                    }}
                   ></input>
                 </div>
 
                 <div className={styles.inputBox}>
                   <label htmlFor="cidadedoanimal" className={styles.inputBox__label}>
                     {" "}
-                    Porte do animal{" "}
+                    Cidade{" "}
                   </label>
                   <input
                     id="number"
                     type="text"
                     name="porte"
-                    placeholder="Informe o porte do pet"
+                    placeholder="Informe a cidade"
                     required
+                    onChange={(e: any) => {
+                      setNomecidade(e.target.value)
+                    }}
                     className={styles.inputBox__input}
                   ></input>
                 </div>
-
-                <div className={styles.inputBox}>
-                  <label htmlFor="estado" className={styles.inputBox__label}>
-                    {" "}
-                    Qual o estado do seu pet ?{" "}
-                  </label>
-                  <input
-                    type="text"
-                    name="estado"
-                    placeholder="Informe o estado do pet"
-                    required
-                    className={styles.inputBox__input2}
-                  ></input>
-                </div>
-
-
-               
-
               </div>
               <div className={styles.continueButton}>
-                <button className={styles.continueButton__btn}>CADASTRAR ANIMAL</button>
+                <button className={styles.continueButton__btn} type="submit">CADASTRAR ANIMAL</button>
               </div>
             </form>
           </div>
         </div>
       </div>
-        </body>
-    )
+    </body>
+  )
 }
